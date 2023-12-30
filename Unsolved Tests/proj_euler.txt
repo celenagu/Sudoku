@@ -1,3 +1,5 @@
+*These unsolved examples were taken from Project Euler's 50 Sudoku Puzzles*
+
 Grid 01
 003020600
 900305001

@@ -126,7 +126,7 @@ bool backtrack (int arr[N][N], int row, int col){
         row++;
     }
 
-    //current element is already assigned
+    //current element is already assigned, recurse
     if (arr[row][col] != 0){
         return backtrack(arr, row, col+1);
     }
@@ -152,15 +152,14 @@ bool backtrack (int arr[N][N], int row, int col){
     return false;
 }
 
-int main(){
-    int board[N][N]{}; //standard 9x9 2d array
+void game(int board[9][9]){
     read_file(board);
 
     std::cout << "Unsolved:" << std::endl;
     print(board);
 
     std::cout << std::endl;
-    
+
     if (backtrack(board, 0, 0)){
         std::cout << "Solved: " << std::endl;
         print(board);
@@ -169,6 +168,11 @@ int main(){
         std::cout << "No solution" << std::endl;
     }
 
+}
+
+int main(){
+    int board[N][N]{}; //standard 9x9 2d array
+    game(board);
 
     return 0;
 }
