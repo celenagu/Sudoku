@@ -13,3 +13,5 @@ bool solved(int arr[9][9]);
 
 //Backtracking algorithm
 bool backtrack (int arr[9][9]);
+
+void game(int board[9][9]);
